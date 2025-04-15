@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نظام حجز قاعة الاجتماعات</title>
+  <!-- استيراد خط Tajawal من جوجل -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- ربط ملف favicon.ico (تأكد من وجود الملف في جذر المشروع) -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- ربط ملف CSS الخارجي -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="sdaia-logo.png" alt="شعار سدايا" style="width: 150px; margin-bottom: 20px;">
+    </div>
+    <h1>نظام حجز قاعة الاجتماعات</h1>
+    <!-- نموذج اختيار اليوم والوقت ونوع الحجز -->
+    <div class="form-section">
+      <label for="daySelect">اختر اليوم:</label>
+      <select id="daySelect">
+        <option value="0">الأحد</option>
+        <option value="1">الاثنين</option>
+        <option value="2">الثلاثاء</option>
+        <option value="3">الأربعاء</option>
+        <option value="4">الخميس</option>
+      </select>
+
+      <label for="startTimeSelect">وقت البدء:</label>
+      <select id="startTimeSelect"></select>
+
+      <label for="endTimeSelect">وقت الانتهاء:</label>
+      <select id="endTimeSelect"></select>
+
+      <label for="bookingTypeSelect">نوع الحجز:</label>
+      <select id="bookingTypeSelect">
+        <option value="اجتماع">اجتماع</option>
+        <option value="مقابلة">مقابلة</option>
+      </select>
+
+      <!-- حقل صاحب الاجتماع (اختياري) -->
+      <label for="meetingOwner">صاحب الاجتماع (اختياري):</label>
+      <input type="text" id="meetingOwner" placeholder="ادخل اسم صاحب الاجتماع">
+
+      <button onclick="bookSlot()">حجز</button>
+    </div>
+
+    <!-- الجدول -->
+    <table>
+      <thead id="scheduleHeader"></thead>
+      <tbody id="scheduleBody"></tbody>
+    </table>
+  </div>
+  
+  <!-- فوتر صغير غير لافت (عند النقر المزدوج عليه يتم تفعيل عملية تفريغ الجدول) -->
+  <footer id="hidden-footer">© 2025 جميع الحقوق محفوظة</footer>
+
+  <!-- ربط ملف JavaScript الخارجي -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>

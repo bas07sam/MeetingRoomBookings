@@ -1,0 +1,180 @@
+/* إعدادات عامة */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Tajawal', sans-serif;
+  background: linear-gradient(to bottom right, #f0f4f8, #dae3e9);
+  direction: rtl;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 5px;
+  color: #333;
+  font-size: 22px;
+}
+
+/* تنسيق النموذج */
+.form-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-section label {
+  font-weight: 600;
+  margin: 0 5px;
+  font-size: 14px;
+}
+
+.form-section select,
+.form-section button,
+.form-section input {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.form-section button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-section button:hover {
+  background-color: #0056b3;
+}
+
+/* تنسيق الجدول */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  table-layout: fixed;
+  background-color: #fafafa;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: 700;
+}
+
+.freeCell {
+  background-color: #fff;
+  color: #333;
+}
+
+.bookedCell {
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+}
+
+/* ألوان مخصصة لكل نوع حجز */
+.type-اجتماع {
+  background-color: #daf8da;
+}
+.type-مقابلة {
+  background-color: #fff5da;
+}
+
+/* تنسيق النص الصغير للاسم صاحب الاجتماع */
+.small-text {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* تنسيق الفوتر المخفي لتفريغ الجدول */
+#hidden-footer {
+  font-size: 10px;
+  color: #999;
+  margin-top: 20px;
+  cursor: default;
+  user-select: none;
+  /* التأكد من أن النص يظهر في المنتصف */
+  text-align: center;
+  width: 100%;
+}
+
+/* تنسيق للجوال لتسهيل الاستخدام على الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .logo img {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .form-section {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form-section label {
+    font-size: 12px;
+  }
+
+  .form-section select,
+  .form-section button,
+  .form-section input {
+    width: 100%;
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  /* تعديل إضافي للفوتر ليتوسط الشاشة بشكل مرتب */
+  #hidden-footer {
+    font-size: 10px;
+    margin-top: 20px;
+    padding: 5px 0;
+    text-align: center;
+  }
+}
